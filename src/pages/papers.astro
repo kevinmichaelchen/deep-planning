@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PaperTable from "../components/PaperTable.astro";
+import { getCollection } from "astro:content";
+
+const allPapers = await getCollection("papers");
+
+const categoryOrder = [
+  "Primary Paper",
+  "Planning Benchmarks",
+  "Travel Planning",
+  "Shopping and Search Agents",
+  "Web Agent Benchmarks",
+  "Tool Use and APIs",
+  "Foundation Models",
+  "Agent Evaluation Frameworks",
+  "LLM Reasoning and Verification",
+];
+
+const grouped = new Map<string, typeof allPapers>();
+for (const cat of categoryOrder) {
+  grouped.set(cat, []);
+}
+for (const paper of allPapers) {
+  const list = grouped.get(paper.data.category);
+  if (list) {
+    list.push(paper);
+  }
+}
+---
+
+<BaseLayout title="Papers" description="Browse all papers related to the DeepPlanning benchmark">
+  <div class="max-w-6xl mx-auto px-6 pt-12 pb-16">
+    <div class="mb-12">
+      <p class="animate-reveal animate-reveal-1 text-[13px] font-medium tracking-widest uppercase text-crimson mb-4">
+        Collection
+      </p>
+      <h1 class="animate-reveal animate-reveal-2 font-serif text-4xl font-semibold tracking-tight mb-3">Papers</h1>
+      <p class="animate-reveal animate-reveal-3 text-ink-muted">
+        {allPapers.length} papers across {categoryOrder.length} categories. Each links to arXiv and includes a local PDF.
+      </p>
+    </div>
+
+    {categoryOrder.map((category, i) => {
+      const papers = grouped.get(category);
+      return papers && papers.length > 0 ? (
+        <PaperTable category={category} papers={papers} index={i} />
+      ) : null;
+    })}
+  </div>
+</BaseLayout>

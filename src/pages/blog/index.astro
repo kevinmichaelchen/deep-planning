@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+---
+
+<BaseLayout title="Blog" description="Blog posts about the DeepPlanning benchmark and related research">
+  <div class="max-w-6xl mx-auto px-6 pt-12 pb-16">
+    <div class="mb-12">
+      <p class="animate-reveal animate-reveal-1 text-[13px] font-medium tracking-widest uppercase text-crimson mb-4">
+        Journal
+      </p>
+      <h1 class="animate-reveal animate-reveal-2 font-serif text-4xl font-semibold tracking-tight mb-3">Blog</h1>
+      <p class="animate-reveal animate-reveal-3 text-ink-muted">
+        Commentary, analysis, and deep dives into the research.
+      </p>
+    </div>
+
+    {posts.length === 0 ? (
+      <p class="text-ink-faint italic">No posts yet.</p>
+    ) : (
+      <div class="grid gap-5 max-w-3xl">
+        {posts.map((post, i) => (
+          <BlogCard
+            title={post.data.title}
+            pubDate={post.data.pubDate}
+            description={post.data.description}
+            tags={post.data.tags}
+            href={`${base}blog/${post.id}/`}
+            index={i}
+          />
+        ))}
+      </div>
+    )}
+  </div>
+</BaseLayout>

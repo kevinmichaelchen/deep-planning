@@ -1,0 +1,344 @@
+[
+  {
+    "id": "deepplanning",
+    "title": "DeepPlanning: Benchmarking Long-Horizon Agentic Planning with Verifiable Constraints",
+    "year": 2026,
+    "arxiv": "2601.18137",
+    "category": "Primary Paper",
+    "description": "Benchmark for practical long-horizon agent planning with multi-day travel and multi-product shopping tasks requiring global constrained optimization.",
+    "filename": "DeepPlanning_2601.18137.pdf"
+  },
+  {
+    "id": "progoverthinking",
+    "title": "Programming over Thinking: Efficient and Robust Multi-Constraint Planning",
+    "year": 2026,
+    "arxiv": "2601.09097",
+    "category": "Planning Benchmarks",
+    "description": "Proposes code generation over chain-of-thought for multi-constraint planning problems.",
+    "filename": "ProgOverThinking_2601.09097.pdf"
+  },
+  {
+    "id": "deepplanner",
+    "title": "DeepPlanner: Scaling Planning Capability for Deep Research Agents via Advantage Shaping",
+    "year": 2025,
+    "arxiv": "2510.12979",
+    "category": "Planning Benchmarks",
+    "description": "Scales planning capabilities in deep research agents using advantage shaping in reinforcement learning.",
+    "filename": "DeepPlanner_2510.12979.pdf"
+  },
+  {
+    "id": "tcp",
+    "title": "TCP: A Benchmark for Temporal Constraint-Based Planning",
+    "year": 2025,
+    "arxiv": "2505.19927",
+    "category": "Planning Benchmarks",
+    "description": "Benchmark focused on planning under temporal constraints, published at EMNLP 2025.",
+    "filename": "TCP_2505.19927.pdf"
+  },
+  {
+    "id": "timearena",
+    "title": "TimeArena: Shaping Efficient Multitasking Language Agents in a Time-Aware Simulation",
+    "year": 2024,
+    "arxiv": "2402.05733",
+    "category": "Planning Benchmarks",
+    "description": "Time-aware simulation for evaluating multitasking efficiency in language agents (ACL 2024).",
+    "filename": "TimeArena_2402.05733.pdf"
+  },
+  {
+    "id": "planbench",
+    "title": "PlanBench: An Extensible Benchmark for Evaluating Large Language Models on Planning and Reasoning about Change",
+    "year": 2022,
+    "arxiv": "2206.10498",
+    "category": "Planning Benchmarks",
+    "description": "Extensible benchmark evaluating LLMs on classical planning and reasoning about state changes.",
+    "filename": "PlanBench_2206.10498.pdf"
+  },
+  {
+    "id": "tourplanner",
+    "title": "TourPlanner: A Competitive Consensus Framework with Constraint-Gated Reinforcement Learning for Travel Planning",
+    "year": 2026,
+    "arxiv": "2601.04698",
+    "category": "Travel Planning",
+    "description": "Uses constraint-gated RL and multi-agent competition for travel planning.",
+    "filename": "TourPlanner_2601.04698.pdf"
+  },
+  {
+    "id": "travelbench",
+    "title": "TravelBench: A Broader Real-World Benchmark for Multi-Turn and Tool-Using Travel Planning",
+    "year": 2025,
+    "arxiv": "2512.22673",
+    "category": "Travel Planning",
+    "description": "Multi-turn travel planning with 10 real-world tools, infeasible request handling, and sandbox evaluation.",
+    "filename": "TravelBench_2512.22673.pdf"
+  },
+  {
+    "id": "triflow",
+    "title": "TriFlow: A Progressive Multi-Agent Framework for Intelligent Trip Planning",
+    "year": 2025,
+    "arxiv": "2512.11271",
+    "category": "Travel Planning",
+    "description": "Multi-agent framework with progressive refinement for trip planning.",
+    "filename": "TriFlow_2512.11271.pdf"
+  },
+  {
+    "id": "tripscore",
+    "title": "TripScore: Benchmarking and Rewarding Real-World Travel Planning with Fine-Grained Evaluation",
+    "year": 2025,
+    "arxiv": "2510.09011",
+    "category": "Travel Planning",
+    "description": "Unified scoring metric for travel plan quality with RL integration via GRPO.",
+    "filename": "TripScore_2510.09011.pdf"
+  },
+  {
+    "id": "triptailor",
+    "title": "TripTailor: A Real-World Benchmark for Personalized Travel Planning",
+    "year": 2025,
+    "arxiv": "2508.01432",
+    "category": "Travel Planning",
+    "description": "Evaluates personalization and reasonableness of itineraries (ACL 2025 Findings).",
+    "filename": "TripTailor_2508.01432.pdf"
+  },
+  {
+    "id": "chinatravel",
+    "title": "ChinaTravel: An Open-Ended Benchmark for Language Agents in Chinese Travel Planning",
+    "year": 2024,
+    "arxiv": "2412.13682",
+    "category": "Travel Planning",
+    "description": "Chinese travel planning benchmark with stricter constraints and DSL-based evaluation.",
+    "filename": "ChinaTravel_2412.13682.pdf"
+  },
+  {
+    "id": "personalllmagents",
+    "title": "Personal Large Language Model Agents: A Case Study on Tailored Travel Planning",
+    "year": 2024,
+    "arxiv": "2410.13766",
+    "category": "Travel Planning",
+    "description": "Case study on personalized travel planning with LLM agents (EMNLP 2024 Industry).",
+    "filename": "PersonalLLMAgents_2410.13766.pdf"
+  },
+  {
+    "id": "travelplanner",
+    "title": "TravelPlanner: A Benchmark for Real-World Planning with Language Agents",
+    "year": 2024,
+    "arxiv": "2402.01622",
+    "category": "Travel Planning",
+    "description": "First travel planning benchmark for LLM agents, featuring multi-day itinerary construction (ICML 2024).",
+    "filename": "TravelPlanner_2402.01622.pdf"
+  },
+  {
+    "id": "localsearchbench",
+    "title": "LocalSearchBench: Benchmarking Agentic Search in Real-World Local Life Services",
+    "year": 2025,
+    "arxiv": "2512.07436",
+    "category": "Shopping and Search Agents",
+    "description": "Evaluates agentic search for local services like restaurants and businesses.",
+    "filename": "LocalSearchBench_2512.07436.pdf"
+  },
+  {
+    "id": "deepshop",
+    "title": "DeepShop: A Benchmark for Deep Research Shopping Agents",
+    "year": 2025,
+    "arxiv": "2506.02839",
+    "category": "Shopping and Search Agents",
+    "description": "Benchmark for shopping agents that must deeply research products before purchasing.",
+    "filename": "DeepShop_2506.02839.pdf"
+  },
+  {
+    "id": "webshop",
+    "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
+    "year": 2022,
+    "arxiv": "2207.01206",
+    "category": "Shopping and Search Agents",
+    "description": "Simulated e-commerce environment for grounded web interaction (NeurIPS 2022).",
+    "filename": "WebShop_2207.01206.pdf"
+  },
+  {
+    "id": "browsecomp",
+    "title": "BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents",
+    "year": 2025,
+    "arxiv": "2504.12516",
+    "category": "Web Agent Benchmarks",
+    "description": "Challenging benchmark from OpenAI testing browsing agent capabilities.",
+    "filename": "BrowseComp_2504.12516.pdf"
+  },
+  {
+    "id": "webvoyager",
+    "title": "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models",
+    "year": 2024,
+    "arxiv": "2401.13919",
+    "category": "Web Agent Benchmarks",
+    "description": "End-to-end web agent using multimodal models for real-world web tasks (ACL 2024).",
+    "filename": "WebVoyager_2401.13919.pdf"
+  },
+  {
+    "id": "webarena",
+    "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+    "year": 2023,
+    "arxiv": "2307.13854",
+    "category": "Web Agent Benchmarks",
+    "description": "Self-hosted realistic web environment for end-to-end agent evaluation (ICLR 2024).",
+    "filename": "WebArena_2307.13854.pdf"
+  },
+  {
+    "id": "mind2web",
+    "title": "Mind2Web: Towards a Generalist Agent for the Web",
+    "year": 2023,
+    "arxiv": "2306.06070",
+    "category": "Web Agent Benchmarks",
+    "description": "Large-scale dataset for building generalist web agents across diverse websites (NeurIPS 2023).",
+    "filename": "Mind2Web_2306.06070.pdf"
+  },
+  {
+    "id": "toolgym",
+    "title": "ToolGym: An Open-World Tool-Using Environment for Scalable Agent Testing and Data Curation",
+    "year": 2026,
+    "arxiv": "2601.06328",
+    "category": "Tool Use and APIs",
+    "description": "Open-world environment for testing tool-using agents at scale.",
+    "filename": "ToolGym_2601.06328.pdf"
+  },
+  {
+    "id": "toolllm",
+    "title": "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-World APIs",
+    "year": 2023,
+    "arxiv": "2307.16789",
+    "category": "Tool Use and APIs",
+    "description": "Framework for training LLMs to use 16,000+ real-world APIs (ICLR 2024).",
+    "filename": "ToolLLM_2307.16789.pdf"
+  },
+  {
+    "id": "apibank",
+    "title": "API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs",
+    "year": 2023,
+    "arxiv": "2304.08244",
+    "category": "Tool Use and APIs",
+    "description": "Benchmark for evaluating LLMs on API/tool usage (EMNLP 2023).",
+    "filename": "APIBank_2304.08244.pdf"
+  },
+  {
+    "id": "deepseekv3",
+    "title": "DeepSeek-v3.2: Pushing the Frontier of Open Large Language Models",
+    "year": 2025,
+    "arxiv": "2512.02556",
+    "category": "Foundation Models",
+    "description": "DeepSeek's frontier open LLM.",
+    "filename": "DeepSeekV3_2512.02556.pdf"
+  },
+  {
+    "id": "glm45",
+    "title": "GLM-4.5: Agentic, Reasoning, and Coding (ARC) Foundation Models",
+    "year": 2025,
+    "arxiv": "2508.06471",
+    "category": "Foundation Models",
+    "description": "MoE model (355B params) strong on agentic benchmarks including TAU-Bench.",
+    "filename": "GLM45_2508.06471.pdf"
+  },
+  {
+    "id": "kimik2",
+    "title": "Kimi K2: Open Agentic Intelligence",
+    "year": 2025,
+    "arxiv": "2507.20534",
+    "category": "Foundation Models",
+    "description": "Open-weight model focused on agentic intelligence from Moonshot AI.",
+    "filename": "KimiK2_2507.20534.pdf"
+  },
+  {
+    "id": "gemini25",
+    "title": "Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, and Agentic Capabilities",
+    "year": 2025,
+    "arxiv": "2507.06261",
+    "category": "Foundation Models",
+    "description": "Google's frontier model with next-generation agentic capabilities.",
+    "filename": "Gemini25_2507.06261.pdf"
+  },
+  {
+    "id": "qwen3",
+    "title": "Qwen3 Technical Report",
+    "year": 2025,
+    "arxiv": "2505.09388",
+    "category": "Foundation Models",
+    "description": "Technical report for the Qwen3 model family from Alibaba.",
+    "filename": "Qwen3_2505.09388.pdf"
+  },
+  {
+    "id": "seed15thinking",
+    "title": "Seed1.5-Thinking: Advancing Superb Reasoning Models with Reinforcement Learning",
+    "year": 2025,
+    "arxiv": "2504.13914",
+    "category": "Foundation Models",
+    "description": "ByteDance's reasoning model trained with RL for advanced reasoning tasks.",
+    "filename": "Seed15Thinking_2504.13914.pdf"
+  },
+  {
+    "id": "limitawareness",
+    "title": "Evaluating the Consistency and Limit-Awareness of LLM Agents",
+    "year": 2026,
+    "arxiv": "2601.22027",
+    "category": "Agent Evaluation Frameworks",
+    "description": "Studies whether LLM agents know and respect their own limitations.",
+    "filename": "LimitAwareness_2601.22027.pdf"
+  },
+  {
+    "id": "agencybench",
+    "title": "AgencyBench: Benchmarking the Frontiers of Autonomous Agents in 1M-Token Real-World Contexts",
+    "year": 2026,
+    "arxiv": "2601.11044",
+    "category": "Agent Evaluation Frameworks",
+    "description": "Evaluates autonomous agents handling million-token real-world contexts.",
+    "filename": "AgencyBench_2601.11044.pdf"
+  },
+  {
+    "id": "vitabench",
+    "title": "VitaBench: Benchmarking LLM Agents with Versatile Interactive Tasks in Real-World Applications",
+    "year": 2025,
+    "arxiv": "2509.26490",
+    "category": "Agent Evaluation Frameworks",
+    "description": "Versatile interactive task benchmark for LLM agents in real applications.",
+    "filename": "VitaBench_2509.26490.pdf"
+  },
+  {
+    "id": "are",
+    "title": "ARE: Scaling Up Agent Environments and Evaluations",
+    "year": 2025,
+    "arxiv": "2509.17158",
+    "category": "Agent Evaluation Frameworks",
+    "description": "Meta's framework for scaling agent environments and evaluation.",
+    "filename": "ARE_2509.17158.pdf"
+  },
+  {
+    "id": "userbench",
+    "title": "UserBench: An Interactive Gym Environment for User-Centric Agents",
+    "year": 2025,
+    "arxiv": "2507.22034",
+    "category": "Agent Evaluation Frameworks",
+    "description": "Interactive environment for evaluating user-centric agent behaviors.",
+    "filename": "UserBench_2507.22034.pdf"
+  },
+  {
+    "id": "pi2bench",
+    "title": "pi2-Bench: Evaluating Conversational Agents in a Dual-Control Environment",
+    "year": 2025,
+    "arxiv": "2506.07982",
+    "category": "Agent Evaluation Frameworks",
+    "description": "Benchmark for conversational agents under dual-control conditions.",
+    "filename": "Pi2Bench_2506.07982.pdf"
+  },
+  {
+    "id": "taubench",
+    "title": "tau-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+    "year": 2024,
+    "arxiv": "2406.12045",
+    "category": "Agent Evaluation Frameworks",
+    "description": "Dynamic policy-guided benchmark for tool-agent-user interaction.",
+    "filename": "TauBench_2406.12045.pdf"
+  },
+  {
+    "id": "selfverification",
+    "title": "On the Self-Verification Limitations of Large Language Models on Reasoning and Planning Tasks",
+    "year": 2024,
+    "arxiv": "2402.08115",
+    "category": "LLM Reasoning and Verification",
+    "description": "Demonstrates that LLMs struggle to verify their own reasoning and planning outputs (ICLR 2025).",
+    "filename": "SelfVerification_2402.08115.pdf"
+  }
+]

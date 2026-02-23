@@ -1,0 +1,15 @@
+{
+  "name": "deep-planning",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.2.0",
+    "astro": "^6.0.0-beta.14",
+    "tailwindcss": "^4.2.0"
+  }
+}

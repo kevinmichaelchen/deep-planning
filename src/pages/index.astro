@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const papers = await getCollection("papers");
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+
+const categories = [...new Set(papers.map((p) => p.data.category))];
+---
+
+<BaseLayout title="Home">
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-parchment via-parchment to-parchment-dark"></div>
+    <div class="relative max-w-6xl mx-auto px-6 pt-20 pb-16">
+      <div class="max-w-3xl">
+        <p class="animate-reveal animate-reveal-1 text-[13px] font-medium tracking-widest uppercase text-crimson mb-6">
+          Research Collection
+        </p>
+        <h1 class="animate-reveal animate-reveal-2 font-serif text-5xl md:text-6xl font-semibold leading-[1.1] tracking-tight mb-6">
+          Deep<em class="text-crimson">Planning</em>
+        </h1>
+        <p class="animate-reveal animate-reveal-3 text-lg text-ink-muted leading-relaxed max-w-2xl mb-4">
+          A curated archive of <strong class="text-ink font-medium">{papers.length} papers</strong> related to the benchmark for long-horizon agentic planning with verifiable constraints.
+        </p>
+        <p class="animate-reveal animate-reveal-4 text-ink-faint text-sm leading-relaxed max-w-xl mb-10">
+          Spanning travel planning, shopping agents, web agents, tool use, foundation models, evaluation frameworks, and LLM reasoning &mdash; the full landscape of constrained agent planning research.
+        </p>
+        <div class="animate-reveal animate-reveal-5 flex gap-4">
+          <a
+            href={`${base}papers/`}
+            class="inline-flex items-center gap-2 bg-ink text-parchment px-5 py-2.5 text-sm font-medium tracking-wide rounded-sm hover:bg-crimson-dark transition-colors"
+          >
+            Browse Papers
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href="https://arxiv.org/abs/2601.18137"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 border border-border-strong text-ink-muted px-5 py-2.5 text-sm font-medium tracking-wide rounded-sm hover:border-ink hover:text-ink transition-colors"
+          >
+            Read on arXiv
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-6xl mx-auto px-6">
+    <hr class="border-border" />
+  </div>
+
+  <!-- Categories overview -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <p class="animate-reveal text-[13px] font-medium tracking-widest uppercase text-ink-faint mb-8">
+      {categories.length} Categories
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {categories.map((category, i) => {
+        const count = papers.filter((p) => p.data.category === category).length;
+        return (
+          <a
+            href={`${base}papers/`}
+            class:list={[
+              "animate-reveal",
+              `animate-reveal-${i + 1}`,
+              "group border border-border rounded-sm p-5 hover:border-crimson/30 hover:bg-surface transition-all",
+            ]}
+          >
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-serif text-lg font-medium group-hover:text-crimson transition-colors">
+                {category}
+              </h3>
+              <span class="text-xs text-ink-faint font-medium tabular-nums bg-parchment-dark px-2 py-0.5 rounded-full">
+                {count}
+              </span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- Blog teaser -->
+  <section class="max-w-6xl mx-auto px-6 pb-16">
+    <div class="border-t border-border pt-12">
+      <div class="flex items-center justify-between mb-4">
+        <p class="text-[13px] font-medium tracking-widest uppercase text-ink-faint">
+          From the Blog
+        </p>
+        <a href={`${base}blog/`} class="text-[13px] font-medium text-crimson hover:text-crimson-dark transition-colors">
+          View all &rarr;
+        </a>
+      </div>
+      <p class="text-ink-muted text-sm">
+        Commentary, analysis, and deep dives into the papers in this collection.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

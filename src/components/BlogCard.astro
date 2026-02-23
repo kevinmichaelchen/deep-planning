@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+  pubDate: Date;
+  description: string;
+  tags: string[];
+  href: string;
+  index?: number;
+}
+
+const { title, pubDate, description, tags, href, index = 0 } = Astro.props;
+---
+
+<article class:list={["animate-reveal", `animate-reveal-${Math.min(index + 1, 9)}`]}>
+  <a href={href} class="group block border border-border rounded-sm p-6 hover:border-crimson/30 hover:bg-surface transition-all">
+    <div class="flex items-center gap-3 mb-3">
+      <time class="text-xs text-ink-faint font-medium tabular-nums" datetime={pubDate.toISOString()}>
+        {pubDate.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+      </time>
+      {tags.length > 0 && (
+        <>
+          <span class="text-border-strong">&middot;</span>
+          <div class="flex flex-wrap gap-1.5">
+            {tags.map((tag) => (
+              <span class="text-[11px] font-medium tracking-wide uppercase text-ink-faint bg-parchment-dark px-2 py-0.5 rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+    <h2 class="font-serif text-xl font-medium text-ink group-hover:text-crimson transition-colors mb-2">
+      {title}
+    </h2>
+    <p class="text-sm text-ink-muted leading-relaxed">{description}</p>
+    <span class="inline-block mt-4 text-xs font-medium text-crimson group-hover:text-crimson-dark transition-colors">
+      Read more &rarr;
+    </span>
+  </a>
+</article>
